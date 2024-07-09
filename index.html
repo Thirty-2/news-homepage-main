@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <title>News|Homepage</title>
+
+  <style>
+
+
+    * {  box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { --color1: hsl(35, 77%, 62%); --color2: hsl(5, 85%, 63%); --color3: hsl(36, 100%, 99%); --color4: hsl(233, 8%, 79%); --color5: hsl(236, 13%, 42%); --color6: hsl(240, 100%, 5%); }
+
+    /* Utilities */
+    h1 { font-size: 60px; width: 300px; }
+    h2 { font-size: 40px; color: var(--color1); }
+    h3 { font-size: 40px; color: var(--color2); }
+    h4 {  }
+    p { color: var(--color5); }
+    hr { opacity: .3; }
+    img { border-radius: 10px; }
+
+    /* Container */
+    #Container { width: fit-content; padding: 20px; margin: 0 auto; }
+
+    /* Header */
+    header { display: flex; justify-content: space-between; padding: 50px 0; }
+    header img { border-radius: 0; }
+    /* nav */
+    nav {  }
+    nav ul { display: flex; align-items: center; }
+    nav ul li { list-style: none;  padding-left: 50px; }
+    nav ul li a { text-decoration: none; color: var(--color5); }
+    nav ul li a:hover { color: var(--color2); }
+    /* Menu */
+    .Menu { display: flex; align-items: center; }
+    .Open-menu, .Close-menu { cursor: pointer; display: none; }
+    .Close-menu { position: absolute; top: 10px; right: 35px; }
+
+    /* check-box */
+    #Check { display: none; z-index: 100;}
+
+    /* Main-section */
+    .Main-section { display: flex; column-gap: 40px; padding-bottom: 100px; }
+
+
+    /* Section-1 */
+    .Section-1 { display: flex; flex-direction: column; row-gap: 20px; }
+
+
+
+    /* Section-1-1 */
+    .Section-1-1 { display: flex; column-gap: 100px; }
+    .Section-1-1 p {  width: 350px; padding-right: 35px; }
+
+    /* Read-more */
+    .Read-more { display: flex; flex-direction: column; row-gap: 90px; }
+    .Read-more  a { text-decoration: none; padding: 15px 50px; background-color: var(--color2); color: var(--color6); border-radius: 10px; }
+
+
+    /* New */
+    .New { display: flex; flex-direction: column; row-gap: 37px; width: 360px; height: 510px; background-color: var(--color6); color: var(--color3);  padding: 30px; border-radius: 10px; }
+
+
+    /* Section2 */
+    .Section2 { display: flex; column-gap: 100px; }
+
+    /* img-1 */
+    .img-1 { display: flex; align-items: center; column-gap: 20px; width: 300px; }
+
+    .img-1 img { width: 100px; height: 120px; }
+
+    /* img-1-1 */
+    .img-1-1 { display: flex; flex-direction: column; row-gap: 12px; }
+
+    /* img-2 */
+    .img-2 { display: flex; align-items: center; column-gap: 20px; width: 300px;  }
+
+    .img-2 img { width: 100px; height: 120px; }
+
+    /* img-2-2 */
+    .img-2-2 { display: flex; flex-direction: column; row-gap: 12px; }
+
+    /* img-3 */
+    .img-3 { display: flex; align-items: center; column-gap: 20px; width: 300px; }
+
+    .img-3 img { width: 100px; height: 120px; }
+
+    /* img-2-2 */
+    .img-3-3 { display: flex; flex-direction: column; row-gap: 12px; }
+
+
+    /* img */
+    .Desktop { width: 760px; }
+    .Mobile { display: none; }
+
+    /* Responsive */
+    @media(max-width: 650px){
+      /*Hamburger*/
+      .Menu { display: block; width: 70%; height: 100%; position: fixed;  top: 0;  right: -100%; z-index: 100; background-color: var(--color3); border-radius: 20px; transition: all 0.2s ease-in-out; padding-top: 100px; }
+      .Menu li { margin-top: 10px; }
+      .Menu li a { padding: 5px; }
+      .Open-menu, .Close-menu { display: block; margin-top: 8px; }
+      #Check:checked ~ .Menu { right: 0; }
+      /**/
+
+
+    /* Utilities */
+    h1 {  width: 400px; }
+    /* Container */
+    #Container { display: flex; padding: 15px; flex-direction: column; }
+
+    /* Main-section */
+    .Main-section { display: flex; flex-direction: column; column-gap: 40px; padding-bottom: 100px; }
+
+
+    /* Section-1 */
+    .Section-1 { display: flex; flex-direction: column; row-gap: 20px; }
+
+
+
+    /* Section-1-1 */
+    .Section-1-1 { display: flex; flex-direction: column; row-gap: 10px; }
+    .Section-1-1 p {  width: 350px; padding-right: 35px; }
+
+    /* Read-more */
+    .Read-more { display: flex; flex-direction: column; row-gap: 50px; padding-bottom: 70px; }
+
+    /* New */
+    .New { width: 100%; }
+
+
+    /* Section2 */
+    .Section2 { display: flex; flex-direction: column; row-gap: 20px; }
+
+    /* img */
+    .Desktop {  display: none; }
+    .Mobile { display: block; width: 100%;  }
+
+    }
+  </style>
+</head>
+<body>
+  <div id="Container">
+    <header>
+      <div>
+        <img src="assets/images/logo.svg" alt="">
+      </div>
+      <nav>
+        <ul>
+          <input type="checkbox" name="Check" id="Check">
+          <div class="Menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+            <label for="Check" class="Close-menu"><img src="assets/images/icon-menu-close.svg" alt=""></label>
+          </div>
+          <label for="Check" class="Open-menu"><img src="assets/images/icon-menu.svg" alt=""></label>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="Main-section">
+        <section class="Section-1">
+          <div>
+            <img class="Desktop" src="assets/images/image-web-3-desktop.jpg" alt="">
+            <img class="Mobile" src="assets/images/image-web-3-mobile.jpg" alt="">
+          </div>
+  
+          <div class="Section-1-1">
+            <div>
+              <h1>The Bright Future of Web 3.0?</h1>
+            </div>
+    
+            <div class="Read-more">
+              <div>
+                <p>
+                  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                  But is it really fulfilling its promise?
+                </p>
+              </div>
+              <div>
+                <a href="#" class="A">READ MORE</a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="Section-2">
+          <div class="New">
+            <h2>
+              New
+            </h2>
+            <div class="New-1">
+              <span>
+                Hydrogen VS Electric Cars
+              </span>
+              <p>
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+              <br>
+            </div>
+            <hr>
+            <div class="New-2">
+              <span>
+                The Downsides of AI Artistry
+              </span>
+              <p>
+                What are the possible adverse effects of on-demand AI image generation?
+              </p>
+              <br>
+            </div>
+            <hr>
+            <div class="New-3">
+              <span>
+                Is VC Funding Drying Up?
+              </span>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at what that means.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+
+      <section class="Section2">
+        <div class="img-1">
+          <img src="assets/images/image-retro-pcs.jpg" alt="">
+          <div class="img-1-1">
+            <h3>
+              01
+            </h3>
+            <h4>
+              Reviving Retro PCs
+            </h4>
+            <p>
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="img-2">
+          <img src="assets/images/image-top-laptops.jpg" alt="">
+          <div class="img-2-2">
+            <h3>
+              02
+            </h3>
+            <h4>
+              Top 10 Laptops of 2022
+            </h4>
+            <p>
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="img-3">
+          <img src="assets/images/image-gaming-growth.jpg" alt="">
+          <div class="img-3-3">
+            <h3>
+              03
+            </h3>
+            <h4>
+              The Growth of Gaming
+            </h4>
+            <p>
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <br>
+    <div class="Osagie_logo" >
+      <h3 style="font-size: 20px; color: white; background-color: black; border-radius: 5px; text-align: center; padding: 5px;">&copy;SAGIE.Mstr-mnd</h3>
+    </div>
+  </div>
+</body>
+</html>
