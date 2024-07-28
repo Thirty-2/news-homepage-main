@@ -15,13 +15,15 @@
     body { --color1: hsl(35, 77%, 62%); --color2: hsl(5, 85%, 63%); --color3: hsl(36, 100%, 99%); --color4: hsl(233, 8%, 79%); --color5: hsl(236, 13%, 42%); --color6: hsl(240, 100%, 5%); }
 
     /* Utilities */
-    h1 { font-size: 60px; width: 300px; }
-    h2 { font-size: 40px; color: var(--color1); }
+    h1 { font-size: 70px; width: 400px; }
+    h2 { font-size: 50px; color: var(--color1); }
     h3 { font-size: 40px; color: var(--color2); }
-    h4 {  }
+    h4:hover { cursor: pointer; color: var(--color2); }
+    span { font-size: 20px; }
+    span:hover { cursor: pointer; color: var(--color1);  }
     p { color: var(--color5); }
     hr { opacity: .3; }
-    img { border-radius: 10px; }
+    img {  }
 
     /* Container */
     #Container { width: fit-content; padding: 20px; margin: 0 auto; }
@@ -53,20 +55,25 @@
 
 
     /* Section-1-1 */
-    .Section-1-1 { display: flex; column-gap: 100px; }
+    .Section-1-1 { display: flex; }
     .Section-1-1 p {  width: 350px; padding-right: 35px; }
 
     /* Read-more */
     .Read-more { display: flex; flex-direction: column; row-gap: 90px; }
-    .Read-more  a { text-decoration: none; padding: 15px 50px; background-color: var(--color2); color: var(--color6); border-radius: 10px; }
+    .Read-more  a { text-decoration: none; padding: 15px 50px; background-color: var(--color2); color: var(--color6); }
+    .Read-more a:hover { background-color: var(--color6); color: var(--color3); }
 
 
     /* New */
-    .New { display: flex; flex-direction: column; row-gap: 37px; width: 360px; height: 510px; background-color: var(--color6); color: var(--color3);  padding: 30px; border-radius: 10px; }
+    .New { display: flex; flex-direction: column; justify-content: space-between; width: 360px; height: 535px; background-color: var(--color6); color: var(--color3);  padding: 30px; }
+
+    .New-1 { display: flex; flex-direction: column; gap: 15px; }
+    .New-2 { display: flex; flex-direction: column; gap: 15px; }
+    .New-3 { display: flex; flex-direction: column; gap: 15px; }
 
 
     /* Section2 */
-    .Section2 { display: flex; column-gap: 100px; }
+    .Section2 { display: flex; gap: 100px; }
 
     /* img-1 */
     .img-1 { display: flex; align-items: center; column-gap: 20px; width: 300px; }
@@ -205,7 +212,6 @@
               <p>
                 Will hydrogen-fueled cars ever catch up to EVs?
               </p>
-              <br>
             </div>
             <hr>
             <div class="New-2">
@@ -215,7 +221,7 @@
               <p>
                 What are the possible adverse effects of on-demand AI image generation?
               </p>
-              <br>
+              
             </div>
             <hr>
             <div class="New-3">
